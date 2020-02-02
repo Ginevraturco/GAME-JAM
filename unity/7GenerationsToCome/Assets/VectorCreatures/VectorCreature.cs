@@ -22,6 +22,8 @@ public class VectorCreature : MonoBehaviour {
 
     
     void Update() {
+        if (agent == null)  Debug.Log(name);
+
         agent.lifetime += Time.deltaTime * MotherNature.self.timescale;
         if (currentIdlespace!=null) {
             if ((targetpoint - transform.position).magnitude < 0.3f)
