@@ -4479,7 +4479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
-  innerPrefab: {fileID: 0}
+  innerPrefab: {fileID: 4343221196523506903, guid: fb5a85a5b4020dc4a88fca1ef9a1cd94,
+    type: 3}
 --- !u!135 &59651499
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4853,7 +4854,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177771439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5041,7 +5042,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209585479}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5163,7 +5164,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259343685}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5296,7 +5297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
-  innerPrefab: {fileID: 2790141402360081659, guid: f3ae69864ee3d62478faa1fc03a8d0a8,
+  innerPrefab: {fileID: 2790141402360081659, guid: d979a5e7fe45c6b4dbaa0d592a5b040b,
     type: 3}
 --- !u!1 &309448818
 GameObject:
@@ -5553,7 +5554,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488084936}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5742,7 +5743,7 @@ MonoBehaviour:
   - {fileID: 1237208810}
   - {fileID: 1532242315}
   - {fileID: 905401363}
-  - {fileID: 297552619}
+  - {fileID: 2790141402360081659, guid: f3ae69864ee3d62478faa1fc03a8d0a8, type: 3}
   - {fileID: 245915542}
   - {fileID: 1263394659}
   environlist:
@@ -7141,7 +7142,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160768535}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7758,7 +7759,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
-  innerPrefab: {fileID: 0}
+  innerPrefab: {fileID: 6573465107730875207, guid: 2bba77cd6d1d7514b85be338ad7f7f7f,
+    type: 3}
 --- !u!135 &1439074250
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8430,7 +8432,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699675785}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10027,6 +10029,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3796983784012769192, guid: 851a33c8af86fa146b8cd54c87ddbae2,
+        type: 3}
+      propertyPath: innerPrefab
+      value: 
+      objectReference: {fileID: 8799281755894339621, guid: d9366cba6b02cb24c92896e8b6a56111,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851a33c8af86fa146b8cd54c87ddbae2, type: 3}
 --- !u!1001 &4914585296927729933

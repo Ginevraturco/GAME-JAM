@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         _controller = GetComponent<CharacterController>();
-        
+      
     }
 
     private Vector3 move = Vector3.zero;
