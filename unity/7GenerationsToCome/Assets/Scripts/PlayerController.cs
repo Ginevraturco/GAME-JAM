@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using Cinemachine;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using UnityEngine.AI;
 using UnityEngineInternal.Input;
 using Debug = UnityEngine.Debug;
