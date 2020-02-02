@@ -117,6 +117,7 @@
     <Compile Include="Assets\IdleInSpaces\Compositespace.cs" />
     <Compile Include="Assets\IdleInSpaces\Cylinderspace.cs" />
     <Compile Include="Assets\IdleInSpaces\Idlespace.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\MotherNature.cs" />
     <Compile Include="Assets\Populator.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
