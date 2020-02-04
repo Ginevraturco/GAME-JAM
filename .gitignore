@@ -8,8 +8,6 @@
 Assets/AssetStoreTools*
 .gradle/
 
-/unity/GenerationsToCome/[Ll]ibrary
-
 # Visual Studio 2015 cache directory
 /.vs/
 
@@ -104,18 +102,12 @@ $RECYCLE.BIN/
 Assets/Plugins/Editor/JetBrains*
 
 # Project Related
-unity/interactonTest/
-/unity/7GenerationsToCome/Assets/_Dev/
-/unity/7GenerationsToCome/Assets/_Dev.meta
-/unity/7GenerationsToCome/Assets/_Test/
-/unity/7GenerationsToCome/Assets/_Test.meta
-/unity/7GenerationsToCome/Library
-
+/Assets/_Dev/
+/Assets/_Dev.meta
+/Assets/_Test/
 
 
 FmodProject/.user/
 FmodProject/.unsaved/
 FmodProject/.cache/
 Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
-unity/7GenerationsToCome/Censimento.txt
-unity/7GenerationsToCome/Censimento.txt
