@@ -32,6 +32,11 @@ public class Walker : VectorCreature {
        if (agent.lifetime > 160) Kill();
     }
 
-    
+    private void OnCollisionEnter(Collision collision) {
+        GetNewDestination();
+    }
+    private void OnCollisionStay(Collision collision) {
+        GetNewDestination();
+    }
 
 }

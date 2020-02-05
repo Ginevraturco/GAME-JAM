@@ -27,12 +27,17 @@ public class VectorCreature : MonoBehaviour {
         agent.lifetime += Time.deltaTime * MotherNature.self.timescale;
         if (currentIdlespace!=null) {
             if ((targetpoint - transform.position).magnitude < 0.3f)
-                targetpoint = currentIdlespace.PickPoint();
+                GetNewDestination();
             Vector3 delta = targetpoint - transform.position;
-            transform.Translate((targetpoint - transform.position).normalized * speed * MotherNature.self.timescale);
+            transform.Translate((targetpoint - transform.position).normalized * Time.deltaTime * speed * MotherNature.self.timescale);
             if (innerPrefab!=null) innerPrefab.transform.rotation = Quaternion.LookRotation(delta, Vector3.up);
         }
         UpdateCreature();
+    }
+
+    protected void GetNewDestination() {
+        if (currentIdlespace == null) return;
+        targetpoint = currentIdlespace.PickPoint();
     }
 
     public void IdleInSpace(Idlespace space) {
