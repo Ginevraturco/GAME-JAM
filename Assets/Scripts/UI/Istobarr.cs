@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Istobarr : MonoBehaviour {
+
+    public RectTransform infants;
+    RectTransform all;
+    Histogram isto;
+
+    void Awake() {
+        all = GetComponent<RectTransform>();
+        isto = GetComponentInParent<Histogram>();
+    }
+
+    public void Setup(CensusEntry census) {
+        all.sizeDelta = new Vector2(all.sizeDelta.x, isto.unit*(census.adults+census.infants));
+        infants.sizeDelta = new Vector2(all.sizeDelta.x, isto.unit*census.infants);
+    }
+
+}

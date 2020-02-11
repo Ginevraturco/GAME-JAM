@@ -13,10 +13,15 @@ public class MotherNature : MonoBehaviour {
 
     public float year = 120; //Un anno in tempo di gioco
     public int characterlife = 5; 
-    public float elaspedTime = 0;
+    public int simulationgens = 7; 
+    public float elapsedTime = 0;
 
     public static MotherNature self;
     public float timescale; //definito dalla scena
+    public bool activePlay = true;
+    public int windowYears = 1;
+
+    public GameObject GodCamera;
 
     void Awake() {
         self = this;
@@ -35,10 +40,10 @@ public class MotherNature : MonoBehaviour {
 
     }
 
-    List<List<string>> stagiono = new List<List<string>>() { new List<string>() {"Tree", "Fish" } ,
-                                                             new List<string>() {"Walker" } ,
+    List<List<string>> stagiono = new List<List<string>>() { new List<string>() {"Tree", "Fish", "Bird" } ,
+                                                             new List<string>() { "Walker" } ,
                                                              new List<string>() { } ,
-                                                             new List<string>() {"Bird", "Anemone" } };
+                                                             new List<string>() { "Anemone" } };
 
     public void TriggerSeason(int season) {
         foreach (string s in stagiono[season])
@@ -47,14 +52,29 @@ public class MotherNature : MonoBehaviour {
 
     public int prev = 0;
     void Update() {
-        elaspedTime += timescale * Time.deltaTime;
+        elapsedTime += timescale * Time.deltaTime;
+        //int next = Mathf.FloorToInt((GetSeason()-0.25f+4)%4);
         int next = Mathf.FloorToInt(GetSeason());
         if (prev != next) TriggerSeason(next);
         prev = next;
+
+        if (activePlay) {
+            if (elapsedTime > year * characterlife)
+                Death();
+        }
+
+    }
+
+    public void Death() {
+        activePlay = false;
+        Camera.main.enabled = false;
+        PlayerController.self.Death();
+        
+        GodCamera.SetActive(true);
     }
 
     public float GetSeason() {
-        return (elaspedTime % 120) / 30;
+        return (elapsedTime % 120) / 30;
     }
 
 }

@@ -8,7 +8,7 @@ public class Collectable : MonoBehaviour {
     public int score;
 
     public int Collect() {
-        collecteds.Add(new Collected(gameObject.name, MotherNature.self.elaspedTime));
+        collecteds.Add(new Collected(GetComponent<VectorCreature>().agent.species, MotherNature.self.elapsedTime));
         if (GetComponent<VectorCreature>() != null)
             GetComponent<VectorCreature>().Kill();
         else

@@ -132,7 +132,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+    public void Death() {
+        gameObject.SetActive(false);
+    }
 
     private void OnTriggerStay(Collider coll)
     {
@@ -196,11 +198,11 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Geyser":
-            {
+            
                 anim.SetBool("Fly", false); //no, perchè il contatto col geyser dura un istante; devi triggerarlo quando scende sotto una certa quota, nell'update ;) 
 
                 break;
-            }
+            
         }
     }
 }

@@ -10,6 +10,14 @@ public class Fish : VectorCreature {
         IdleInSpace(MotherNature.Environments["Lake"]);
     }
 
+    public static int NextGeneration(int pop) {
+        
+        Dictionary<string, CensusEntry> census = Censor.self.Census();
+        Debug.Log("F " + census["Fish"].adults + " B " + census["Bird"].adults);
+        return census["Fish"].adults * census["Bird"].adults/10;
+    }
+
+    public override bool IsAdult() { return false; }
     
     override protected void UpdateCreature()
     {
@@ -20,13 +28,14 @@ public class Fish : VectorCreature {
         transform.localScale = Vector3.one * Mathf.Lerp(0.1f, 1, (agent.lifetime - 30) / 10);
 
         if (MotherNature.self.GetSeason() > 2 )
-            if (MotherNature.self.elaspedTime % 30 > phase) GoDragonfly();
+            if (MotherNature.self.elapsedTime % 30 > phase) GoDragonfly();
     }
 
     public void GoDragonfly() {
         GameObject dragon=Instantiate(MotherNature.Creatures["Dragonfly"], transform.position, transform.rotation);
         dragon.SetActive(true);
         dragon.GetComponent<Dragonfly>().agent = this.agent;
+        this.agent.vector = dragon.GetComponent<Dragonfly>();
         Destroy(this.gameObject);
     }
 

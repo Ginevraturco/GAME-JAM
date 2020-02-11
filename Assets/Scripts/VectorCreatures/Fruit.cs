@@ -7,8 +7,10 @@ public class Fruit : VectorCreature {
     void Start() {
         
     }
+    public override bool IsAdult() {
+        return true;
+    }
 
-    
     override protected void UpdateCreature() {
 
         if (agent.lifetime > 34) Kill();

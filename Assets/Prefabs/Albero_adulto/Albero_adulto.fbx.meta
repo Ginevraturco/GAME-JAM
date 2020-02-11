@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: e1e090a7fdf7cf54baf75c05806a7cc9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Chioma
+    100004: Frutti
+    100006: Germoglio
+    100008: polySurface3
+    100010: pSphere37
+    100012: pSphere39
+    100014: pSphere40
+    100016: pSphere42
+    100018: pSphere43
+    100020: pSphere44
+    100022: pSphere45
+    100024: pSphere46
+    100026: pSphere47
+    100028: pSphere48
+    100030: pSphere49
+    100032: pSphere50
+    100034: pSphere51
+    100036: pSphere52
+    100038: pSphere53
+    100040: Tronco
+    400000: //RootNode
+    400002: Chioma
+    400004: Frutti
+    400006: Germoglio
+    400008: polySurface3
+    400010: pSphere37
+    400012: pSphere39
+    400014: pSphere40
+    400016: pSphere42
+    400018: pSphere43
+    400020: pSphere44
+    400022: pSphere45
+    400024: pSphere46
+    400026: pSphere47
+    400028: pSphere48
+    400030: pSphere49
+    400032: pSphere50
+    400034: pSphere51
+    400036: pSphere52
+    400038: pSphere53
+    400040: Tronco
+    2100000: TOON_Tronco
+    2100002: TOON_Chioma
+    2100004: TOON_Frutti
+    2100006: TOON_Tronchetto
+    2300000: Germoglio
+    2300002: polySurface3
+    2300004: pSphere37
+    2300006: pSphere39
+    2300008: pSphere40
+    2300010: pSphere42
+    2300012: pSphere43
+    2300014: pSphere44
+    2300016: pSphere45
+    2300018: pSphere46
+    2300020: pSphere47
+    2300022: pSphere48
+    2300024: pSphere49
+    2300026: pSphere50
+    2300028: pSphere51
+    2300030: pSphere52
+    2300032: pSphere53
+    2300034: Tronco
+    3300000: Germoglio
+    3300002: polySurface3
+    3300004: pSphere37
+    3300006: pSphere39
+    3300008: pSphere40
+    3300010: pSphere42
+    3300012: pSphere43
+    3300014: pSphere44
+    3300016: pSphere45
+    3300018: pSphere46
+    3300020: pSphere47
+    3300022: pSphere48
+    3300024: pSphere49
+    3300026: pSphere50
+    3300028: pSphere51
+    3300030: pSphere52
+    3300032: pSphere53
+    3300034: Tronco
+    4300000: Tronco
+    4300002: pSphere42
+    4300004: pSphere40
+    4300006: pSphere37
+    4300008: pSphere43
+    4300010: pSphere39
+    4300012: pSphere51
+    4300014: pSphere52
+    4300016: pSphere47
+    4300018: pSphere44
+    4300020: pSphere45
+    4300022: pSphere48
+    4300024: pSphere49
+    4300026: pSphere50
+    4300028: pSphere53
+    4300030: pSphere46
+    4300032: Germoglio
+    4300034: polySurface3
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

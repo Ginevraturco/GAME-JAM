@@ -11,7 +11,7 @@ public class VectorCreature : MonoBehaviour {
     protected float phase;
     public GameObject innerPrefab;
 
-    public virtual void RandomAge() { }
+    public virtual void RandomAge(float portio) { }
 
     void Awake() {
         phase = Random.Range(0, 7); 
@@ -19,6 +19,8 @@ public class VectorCreature : MonoBehaviour {
 
     protected virtual void UpdateCreature() {
     }
+
+    public virtual bool IsAdult() { return true; }
 
     
     void Update() {

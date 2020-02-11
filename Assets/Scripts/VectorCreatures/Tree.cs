@@ -7,12 +7,22 @@ public class Tree : VectorCreature {
 
     public GameObject[] ages;
 
-    public override void RandomAge() {
-        int eta = Random.Range(0, 3);
+    public override bool IsAdult() { return agent.lifetime>MotherNature.self.year*0.75f; }
+
+    public override void RandomAge(float portio) {
+        //int eta = Random.Range(0, 3);
+        int eta = Mathf.FloorToInt(portio * 3);
         SetStage(eta);
         agent.lifetime = eta * MotherNature.self.year+phase;
     }
     
+    public static int NextGeneration(int pop) {
+        Dictionary<string, CensusEntry> census = Censor.self.Census();
+
+        Debug.Log("W " + census["Walker"].adults + " F " + census["Fruit"].adults);
+        return census["Walker"].adults * census["Fruit"].adults/40;
+    }
+
     void Start() {
         //IdleInSpace("TreeCanopy");
         SetStage(0);
@@ -41,7 +51,7 @@ public class Tree : VectorCreature {
     private void GenerateFruit() {
         GameObject g = Instantiate(MotherNature.Creatures["Fruit"], GetComponent<Idlespace>().PickPoint(), Quaternion.identity);
         g.SetActive(true);
-        g.GetComponent<VectorCreature>().agent = SymAgent.Create("Fruit", Random.Range(0, 2.0f));
+        g.GetComponent<VectorCreature>().agent = SymAgent.Create("Fruit",g.GetComponent<VectorCreature>(), Random.Range(0, 2.0f));
     }
 
     void SetStage(int age) {

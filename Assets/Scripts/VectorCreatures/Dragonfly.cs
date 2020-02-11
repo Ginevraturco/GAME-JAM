@@ -12,26 +12,26 @@ public class Dragonfly : VectorCreature {
         IdleInSpace(MotherNature.Environments["LakeSky"]);
     }
 
-        
+    public override bool IsAdult() { return true; }    
       
     override protected void UpdateCreature() {
         timebellula += Time.deltaTime * MotherNature.self.timescale;
 
-        if (timebellula>20 && currentIdlespace.name!="AnemonesSky" & MotherNature.self.GetSeason()>2) 
+        if (agent.lifetime<80 && timebellula>10 && currentIdlespace.name!="AnemonesSky" & MotherNature.self.GetSeason()>2) 
             IdleInSpace(MotherNature.Environments["AnemonesSky"]);
 
-        if (agent.lifetime>100 && MotherNature.self.GetSeason()<2)
+        if (agent.lifetime>100 && currentIdlespace.name!="LakeSky"/* && MotherNature.self.GetSeason()<2*/)
             IdleInSpace(MotherNature.Environments["LakeSky"]);
 
-        if (agent.lifetime > 150) Kill();
+        if (agent.lifetime > 130) Kill();
         //    GoFish();
     }
-
+    /*
     public void GoFish() {
         GameObject dragon=Instantiate(MotherNature.Creatures["Fish"], transform.position, transform.rotation);
         dragon.GetComponent<Fish>().agent = SymAgent.Create("Fish"); //this.agent;
         dragon.SetActive(true);
         Destroy(this.gameObject);
-    }
+    }*/
 
 }

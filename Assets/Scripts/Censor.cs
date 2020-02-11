@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Censor : MonoBehaviour {
     
+    public static Censor self;
+    
+    void Awake() {
+        self = this;
+    }
 
+
+    /*
     void Start() {
         s += SymAgent.Censimento('\t')+"\r\n";
         
@@ -21,6 +28,32 @@ public class Censor : MonoBehaviour {
 
     void OnDestroy() {
         System.IO.File.WriteAllText("Censimento.txt", s);
+    }*/
+
+    public Dictionary<string,CensusEntry> Census() {
+        Dictionary<string, CensusEntry> returner = new Dictionary<string, CensusEntry>();
+        foreach (KeyValuePair<string, List<SymAgent>> kvp in SymAgent.All) {
+            CensusEntry entry = new CensusEntry(kvp.Key, 0, 0);
+            returner[kvp.Key] = entry;
+            foreach (SymAgent a in kvp.Value)
+                if (a.IsAdult())
+                    entry.adults++;
+                else
+                    entry.infants++;
+        }
+        return returner;
+    }
+
+
+}
+
+public class CensusEntry {
+    public int infants;
+    public int adults;
+    public string specie;
+
+    public CensusEntry(string specie, int infants, int adults) {
+        this.specie = specie; this.infants = infants; this.adults = adults;
     }
 
 }
